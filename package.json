@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "using sass, html5, css3, animations, responsive portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ceciceciceci/newPortfolioSite.git"
+  },
+  "author": "Cecilia Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ceciceciceci/newPortfolioSite/issues"
+  },
+  "homepage": "https://github.com/Ceciceciceci/newPortfolioSite#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
