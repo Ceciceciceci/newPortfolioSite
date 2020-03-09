@@ -1,0 +1,68 @@
+@import 'config';
+@import 'menu'; 
+
+// GENERAL
+*{
+    box-sizing: border-box; //this is used so that it doesn't affect the height and width with any padding
+}
+body{
+    @include background;
+    background: $gray;
+    color: $white;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// HEADINGS
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading{
+        font-size:6rem; //rem unit * html font size unless you set it. default is 16 px.
+    }
+    &.lg-heading span{
+        color: $yellowish;
+    }
+    &.sm-heading{
+        margin-bottom:2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($gray, 2), 0.5);
+    }
+}
+
+a{
+    color: $white;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+main{
+    padding:4rem;
+    height:100%;
+
+    .icons{
+        margin-top: 1rem;
+        a{
+            padding:0.4rem;
+            &:hover {
+                color: $yellowish;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home{
+        overflow:hidden;
+        h1{
+            margin-top: 20vh;
+        }
+    }
+}
