@@ -23,7 +23,7 @@ h1, h2, h3 {
     &.lg-heading{
         font-size:6rem; //rem unit * html font size unless you set it. default is 16 px.
     }
-    &.lg-heading span{
+    &.text-secondary{
         color: $yellowish;
     }
     &.sm-heading{
@@ -46,7 +46,8 @@ header{
 
 main{
     padding:4rem;
-    height:100%;
+    // height:100%;
+    min-height: calc(100vh - 60px); //for sitcky footer calc view port sub the height of the footer
 
     .icons{
         margin-top: 1rem;
@@ -66,3 +67,52 @@ main{
         }
     }
 }
+
+
+//ABOUT SECTION
+
+.about-info{ 
+    display:grid;
+    grid-gap: 30px;
+    text-align: left;
+    grid-template-areas: 
+    'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bioimage {
+        grid-area: bioimage;   
+        margin: auto;
+        border-radius: 50%;
+        border: $yellowish 3px solid;
+    }
+    
+    .bio{
+        grid-area: bio
+    }
+    .job1{
+        grid-area: job1
+    }
+    .job2{
+        grid-area: job2
+    }
+    .job3{
+        grid-area: job3
+    }
+    
+    .job{
+        background: lighten($gray, 5);
+        padding: 0.5rem;
+        border-bottom: $yellowish 5px solid;
+    }
+}
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: darken($gray, 10);
+    color: set-text-color($gray);
+    height: 60px;
+}
+
+@import 'mobile'; 
